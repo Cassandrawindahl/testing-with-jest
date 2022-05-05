@@ -18,10 +18,10 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBe(42);
 });
 
-test('peek on stack with two or more elements removes the last element', () => {
+test('pop on stack with four elements, checks that it removes the last element', () => {
     stack.push("hej");
     stack.push("på");
     stack.push("dig");
     stack.push(1);
-    expect(stack.pop()).toBe(1);
+    expect(stack.pop()).toBe("hej"); //Kallar fel, det bör vara 1.
 });
