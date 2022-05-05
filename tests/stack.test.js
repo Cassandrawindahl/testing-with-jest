@@ -23,5 +23,5 @@ test('pop on stack with four elements, checks that it removes the last element',
     stack.push("på");
     stack.push("dig");
     stack.push(1);
-    expect(stack.pop()).toBe("hej"); //Kallar fel, det bör vara 1.
+    expect(stack.pop()).toBe(1); //Nu e denna rad rätt, ska ge 1
 });

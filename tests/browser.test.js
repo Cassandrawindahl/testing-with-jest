@@ -35,12 +35,12 @@ describe('Clicking "Pusha till stacken"', () => {
 
 test('The stack should have one value', async () => {
 	let stack = await driver.findElement(By.id('top_of_stack')).getText();
-	expect(stack).toEqual("hej"); //Borde vara bananer eftersom förra testet la till detta
+	expect(stack).toEqual("Bananer"); //Ändrad rad för att det ska fungera. 
 }) 
 
 describe('Clicking "poppa stacken"', () => {
 	it('should open an alert box', async () => {
-		let pop = await driver.findElement(By.id('peek')); //Peek ger ingen alert
+		let pop = await driver.findElement(By.id('pop')); //pop ger alert
 		await pop.click();
 		let alert = await driver.switchTo().alert();
 		await alert.accept();
